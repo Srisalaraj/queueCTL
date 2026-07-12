@@ -1,0 +1,22 @@
+{
+  "name": "queuectl",
+  "version": "1.0.0",
+  "description": "CLI Background Job Queue",
+  "type": "module",
+  "main": "cli.js",
+  "bin": {
+    "queuectl": "./cli.js"
+  },
+  "scripts": {
+    "start": "node cli.js",
+    "dev": "nodemon cli.js"
+  },
+  "keywords": [
+    "nodejs",
+    "cli",
+    "queue",
+    "worker"
+  ],
+  "author": "Raj Kumar",
+  "license": "ISC"
+}

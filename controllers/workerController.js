@@ -1,7 +1,6 @@
 import * as workerService from "../services/workerService.js";
 import logger from "../utils/logger.js";
 
-
 export const startWorker = async () => {
   try {
     const worker = await workerService.registerWorker();
@@ -27,17 +26,11 @@ export const startWorker = async () => {
 };
 
 export const stopWorker = async (workerId) => {
-  const worker = await Worker.findOne({
-    workerId,
-  });
+  try {
+    const worker = await workerService.stopWorker(workerId);
 
-  if (!worker) {
-    throw new Error("Worker not found.");
+    logger.success(`Worker ${worker.workerId} stopped.`);
+  } catch (error) {
+    logger.error(error.message);
   }
-
-  worker.status = "stopped";
-
-  await worker.save();
-
-  return worker;
 };

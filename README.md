@@ -6,6 +6,15 @@ The application allows users to enqueue shell commands, process them using backg
 
 ---
 
+## 🎥 Demo Video
+
+A complete demonstration of QueueCTL is available here:
+
+**Google Drive Link:**  
+https://drive.google.com/file/d/1aYhtyZDin9JzJQs4GyR4R_vGngwlX5G8/view?usp=sharing
+
+---
+
 ## Features
 
 - Enqueue shell commands
